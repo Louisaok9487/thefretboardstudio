@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.thefretboardstudio.co.nz/sitemap.xml
