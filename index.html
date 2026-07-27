@@ -72,6 +72,7 @@
                 <!-- Desktop nav -->
                 <div class="hidden md:flex space-x-6 items-center">
                     <a href="#about" class="text-sm font-bold text-stone-600 hover:text-primary-600 transition-colors">About</a>
+                    <a href="#community" class="text-sm font-bold text-stone-600 hover:text-primary-600 transition-colors">Community</a>
                     <a href="#teacher" class="text-sm font-bold text-stone-600 hover:text-primary-600 transition-colors">Teacher</a>
                     <a href="#services" class="text-sm font-bold text-stone-600 hover:text-primary-600 transition-colors">Services</a>
                     <a href="#pricing" class="text-sm font-bold text-stone-600 hover:text-primary-600 transition-colors">Pricing</a>
@@ -93,6 +94,7 @@
             <div id="mobileMenu" class="hidden md:hidden pb-4 border-t border-stone-200 mt-1">
                 <div class="flex flex-col gap-1 pt-3">
                     <a href="#about" onclick="closeMenu()" class="px-3 py-2.5 text-sm font-bold text-stone-700 hover:bg-stone-100 rounded-lg transition-colors">About</a>
+                    <a href="#community" onclick="closeMenu()" class="px-3 py-2.5 text-sm font-bold text-stone-700 hover:bg-stone-100 rounded-lg transition-colors">Community</a>
                     <a href="#teacher" onclick="closeMenu()" class="px-3 py-2.5 text-sm font-bold text-stone-700 hover:bg-stone-100 rounded-lg transition-colors">Teacher</a>
                     <a href="#services" onclick="closeMenu()" class="px-3 py-2.5 text-sm font-bold text-stone-700 hover:bg-stone-100 rounded-lg transition-colors">Services</a>
                     <a href="#pricing" onclick="closeMenu()" class="px-3 py-2.5 text-sm font-bold text-stone-700 hover:bg-stone-100 rounded-lg transition-colors">Pricing</a>
@@ -116,26 +118,35 @@
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary-900/90 pointer-events-none"></div>
         <div class="max-w-4xl mx-auto relative z-10">
             <span class="inline-block py-1.5 px-4 rounded-full bg-accent-500 text-white text-sm font-bold tracking-wide uppercase mb-6 shadow-sm transform -rotate-2">
-                Kids, Teens & Adults | Absolute Beginners Welcome!
+                Free Loan Guitars | Schools · Libraries · Retirement Villages · Community Groups
             </span>
             <h1 class="text-4xl md:text-6xl font-bold text-cream-50 mb-6 leading-tight font-serif tracking-wide">
-                Start Your <span class="text-accent-400">Musical Journey</span> Today!
+                Community <span class="text-accent-400">Guitar Programmes</span> for Auckland
             </h1>
             <p class="text-lg md:text-xl text-primary-50 mb-6 max-w-2xl mx-auto font-medium leading-relaxed">
-                Fun, engaging guitar lessons for kids, teens, and adults. Whether you want to strum your first chord, join a group jam, or refresh a guitar that is difficult to play, we're here to help!
+                We bring guitars, instruction and setup to your group — no one needs to own an instrument to start. Private lessons also available.
             </p>
             <!-- Quick price + location info -->
             <div class="flex flex-wrap justify-center gap-3 mb-8">
                 <span class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white text-sm font-bold px-4 py-2 rounded-full border border-white/30">📍 Mt Wellington, Auckland</span>
             </div>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#services" class="bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
-                    See What We Offer
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#community" class="bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                    Enquire About a Community Programme
                 </a>
-                <a href="#contact" class="bg-cream-50 text-primary-800 hover:bg-white font-bold py-3 px-8 rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
-                    Book a Lesson
+                <a href="#pricing" class="text-primary-100 hover:text-white font-bold text-sm underline underline-offset-4 transition-colors">
+                    Private Lessons
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- Loan Guitar Strip -->
+    <section class="bg-primary-800 py-4 px-4 border-b-4 border-accent-500">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-cream-50 font-medium text-sm md:text-base">
+                🎸 You don't need to buy a guitar to start. We provide well-maintained loan guitars for community sessions — sourced, repaired and set up by us.
+            </p>
         </div>
     </section>
 
@@ -226,7 +237,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
                     <h4 class="font-bold text-stone-900 font-serif text-lg">Who We Teach</h4>
-                    <p class="text-stone-600 font-medium">Kids & Teens (ages 9–15)<br>Adults welcome too — any age!</p>
+                    <p class="text-stone-600 font-medium">Kids & Teens (9–15) · Adults (16+)</p>
                 </div>
                 <!-- Online -->
                 <div class="bg-white rounded-2xl p-6 border-2 border-stone-100 shadow-sm flex flex-col items-center gap-3">
@@ -240,12 +251,59 @@
         </div>
     </section>
 
+    <!-- Community & Group Programmes -->
+    <section id="community" class="py-20 bg-primary-800 text-cream-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block py-1.5 px-4 rounded-full bg-accent-500 text-white text-xs font-bold tracking-wide uppercase mb-4">
+                    Our Main Focus
+                </span>
+                <h2 class="text-3xl font-bold font-serif mb-4">Community & Group Programmes</h2>
+                <div class="w-24 h-2 bg-accent-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-primary-100 max-w-2xl mx-auto font-medium leading-relaxed">
+                    We run guitar sessions for schools, libraries, retirement villages, and community groups across Auckland. Funded programmes may be available for eligible groups.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto mb-10">
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-5 flex items-start gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    <p class="font-medium">Free loan guitars provided (up to 10 instruments)</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-5 flex items-start gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    <p class="font-medium">Suitable for kids, teens, adults and seniors</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-5 flex items-start gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    <p class="font-medium">No experience needed</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-5 flex items-start gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    <p class="font-medium">We handle instruments, setup and maintenance</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-5 flex items-start gap-3 sm:col-span-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    <p class="font-medium">Ideal for wellbeing, social connection and lifelong learning</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <p class="text-accent-300 font-bold mb-5">Group & community sessions from $20–25 per person (small groups). Funded programmes also available for eligible groups.</p>
+                <a href="#contact" class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                    Get in Touch to Discuss a Programme
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Core Programs / Services Grid -->
     <section id="services" class="py-20 bg-cream-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-stone-900 font-serif mb-4">Our Services</h2>
+                <h2 class="text-3xl font-bold text-stone-900 font-serif mb-4">Private Lessons & Services</h2>
                 <div class="w-24 h-2 bg-accent-500 mx-auto rounded-full"></div>
+                <p class="text-stone-500 font-medium mt-4">Prefer one-on-one? Private lessons are also available on request.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
@@ -274,7 +332,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-stone-900 mb-3 font-serif">Group Lessons</h3>
                     <p class="text-stone-600 leading-relaxed font-medium">
-                        Learning is better with friends! Our small group lessons are a fantastic way to learn rhythm, playing together in time, and getting comfortable making music in a relaxed, team-oriented setting.
+                        Learning is better with friends! Our small group lessons are a fantastic way to learn rhythm, playing together in time, and getting comfortable making music in a relaxed, team-oriented setting. From $20–25 per person.
                     </p>
                 </div>
 
