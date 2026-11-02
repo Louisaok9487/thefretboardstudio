@@ -43,29 +43,125 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <!-- 4. LocalBusiness / MusicSchool JSON-LD Schema -->
+    <!-- 4. Structured data: MusicSchool / LocalBusiness + Courses, Offers & Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MusicSchool",
-      "name": "The Fretboard Studio",
-      "url": "https://www.thefretboardstudio.co.nz/",
-      "logo": "https://www.thefretboardstudio.co.nz/images/logo.png",
-      "image": "https://www.thefretboardstudio.co.nz/images/logo.png",
-      "description": "Community guitar programmes with free loan guitars, beginner acoustic & fingerstyle guitar lessons, and basic guitar setups in Mt Wellington, Auckland.",
-      "telephone": "+642102219932",
-      "email": "yingpin.lan@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Mt Wellington, Auckland",
-        "addressRegion": "Auckland",
-        "addressCountry": "NZ"
-      },
-      "areaServed": "Auckland",
-      "priceRange": "$$",
-      "sameAs": [
-        "https://www.facebook.com/people/The-Fretboard-Studio/61573285304020/",
-        "https://www.youtube.com/@louisaok/shorts"
+      "@graph": [
+        {
+          "@type": ["MusicSchool", "LocalBusiness"],
+          "@id": "https://www.thefretboardstudio.co.nz/#organisation",
+          "name": "The Fretboard Studio",
+          "url": "https://www.thefretboardstudio.co.nz/",
+          "logo": "https://www.thefretboardstudio.co.nz/images/logo.png",
+          "image": "https://www.thefretboardstudio.co.nz/images/logo.png",
+          "description": "Beginner-friendly community guitar programmes for Auckland libraries, schools, retirement villages and community groups, with free loan guitars provided. Private acoustic guitar lessons and basic guitar setup services are also available.",
+          "telephone": "+642102219932",
+          "email": "yingpin.lan@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mt Wellington",
+            "addressRegion": "Auckland",
+            "addressCountry": "NZ"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Auckland"
+          },
+          "priceRange": "$$",
+          "sameAs": [
+            "https://www.facebook.com/people/The-Fretboard-Studio/61573285304020/",
+            "https://www.youtube.com/@louisaok/shorts"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Guitar programmes, lessons and services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Community and Group Guitar Programmes",
+                "priceCurrency": "NZD",
+                "price": "25",
+                "description": "Beginner-friendly guitar sessions for groups, with loan guitars provided. Small-group sessions start from NZD 25 to NZD 30 per participant.",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Community and Group Guitar Programme",
+                  "description": "Beginner-friendly acoustic guitar programme for schools, libraries, retirement villages and community groups across Auckland. Loan guitars are provided for community sessions.",
+                  "provider": { "@id": "https://www.thefretboardstudio.co.nz/#organisation" },
+                  "educationalLevel": "Beginner"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Kids One-on-One Guitar Lesson",
+                "priceCurrency": "NZD",
+                "price": "50",
+                "description": "One 60-minute beginner-friendly guitar lesson for ages 9 to 15.",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Kids One-on-One Guitar Lessons",
+                  "description": "Personalised beginner acoustic and fingerstyle guitar lessons for learners aged 9 to 15.",
+                  "provider": { "@id": "https://www.thefretboardstudio.co.nz/#organisation" },
+                  "educationalLevel": "Beginner"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Adult One-on-One Guitar Lesson",
+                "priceCurrency": "NZD",
+                "price": "65",
+                "description": "One 60-minute guitar lesson for adults aged 16 and over.",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Adult One-on-One Guitar Lessons",
+                  "description": "Personalised acoustic and fingerstyle guitar lessons for adults.",
+                  "provider": { "@id": "https://www.thefretboardstudio.co.nz/#organisation" }
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Kids Six-Session Starter Pack",
+                "priceCurrency": "NZD",
+                "price": "270",
+                "description": "Six 60-minute beginner guitar lessons for ages 9 to 15.",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Kids Six-Session Guitar Starter Pack",
+                  "description": "A six-session beginner course with the goal of playing and singing one complete simple song.",
+                  "provider": { "@id": "https://www.thefretboardstudio.co.nz/#organisation" },
+                  "educationalLevel": "Beginner"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Adult Six-Session Starter Pack",
+                "priceCurrency": "NZD",
+                "price": "350",
+                "description": "Six 60-minute beginner guitar lessons for adults.",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Adult Six-Session Guitar Starter Pack",
+                  "description": "A six-session beginner course with the goal of playing and singing one complete simple song.",
+                  "provider": { "@id": "https://www.thefretboardstudio.co.nz/#organisation" },
+                  "educationalLevel": "Beginner"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Guitar Refresh and Basic Setup",
+                "priceCurrency": "NZD",
+                "price": "60",
+                "description": "Labour charge for inspection, cleaning, fretboard conditioning, restringing, tuning and basic setup checks. Strings are additional.",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Guitar Refresh and Basic Setup",
+                  "provider": { "@id": "https://www.thefretboardstudio.co.nz/#organisation" },
+                  "areaServed": { "@type": "City", "name": "Auckland" }
+                }
+              }
+            ]
+          }
+        }
       ]
     }
     </script>
@@ -442,7 +538,7 @@
                 <!-- Service 3 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border-2 border-stone-100 hover:border-primary-500 transition-colors relative overflow-hidden group">
                     <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 text-primary-900">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-32 h-32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.350 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-32 h-32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
                     <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mb-6 text-primary-700 transform -rotate-3">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -729,7 +825,7 @@
                         <a href="https://wa.me/642102219932" target="_blank" rel="noopener"
                            onclick="trackEvent('contact_whatsapp', 'Contact Section CTA')"
                            class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl shadow transition-all transform hover:-translate-y-0.5">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             Chat on WhatsApp — +64 21 022 19932
                         </a>
                         <p class="text-stone-400 text-sm mt-3 font-medium">or fill in the form below 👇</p>
@@ -816,7 +912,7 @@
                    onclick="trackEvent('click_social', 'Facebook Page')"
                    class="flex items-center gap-4 bg-white border-2 border-stone-100 hover:border-blue-400 rounded-2xl p-6 shadow-sm transition-all group hover:-translate-y-1">
                     <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-100 transition-colors shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.990 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </div>
                     <div class="text-left">
                         <p class="font-bold text-stone-900 text-lg">Facebook Page</p>
